@@ -47,7 +47,7 @@ def get_hyperparams():
 
 def get_data_handler_config(party_id, dataset, folder_data, is_agg=False):
 
-    SUPPORTED_DATASETS = ['mnist']
+    SUPPORTED_DATASETS = ['xray']
     if dataset in SUPPORTED_DATASETS:
         data = datahandlers.get_datahandler_config(
             dataset, folder_data, party_id, is_agg)
