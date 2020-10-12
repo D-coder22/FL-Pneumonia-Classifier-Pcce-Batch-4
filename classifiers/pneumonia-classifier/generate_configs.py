@@ -62,11 +62,11 @@ def get_model_config(folder_configs, dataset, is_agg=False, party_id=0):
         return None
 
     num_classes = 2
-    img_rows, img_cols = 500, 500
+    img_rows, img_cols = 150,150
     if K.image_data_format() == 'channels_first':
-        input_shape = (1, img_rows, img_cols)
+        input_shape = (3, img_rows, img_cols)
     else:
-        input_shape = (img_rows, img_cols, 1)
+        input_shape = (img_rows, img_cols, 3)
 
     model = Sequential()
     model.add(Conv2D(32, kernel_size=(3, 3),
