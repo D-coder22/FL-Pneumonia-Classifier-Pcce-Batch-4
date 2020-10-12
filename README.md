@@ -90,3 +90,13 @@ change the index from 0 to 2 in every terminal. Once all are parties are initial
 Type `TRAIN` in the aggregator terminal to start the training.
 
 Type `EVAL` to evaluate the network post training.
+
+## Note
+
+* To improve training change the values in the for loop of the `generate_data.py` file and increase the number of images the model trains on.
+
+* The size of the image can be made larger by changing the height and width input in the `generate_data.py` file. This will improve the ability of the network to train better on the given data
+
+* Our Processor could not handle more than 200 images per party and hence were not increased in number, for better accuracy the number recommened would be 400.
+
+* We used images that were scaled down to 150*150 pixels resulting in more loss during the 1st round, the network trains better on higher resolution images.
